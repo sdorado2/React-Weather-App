@@ -4,7 +4,10 @@ const Search = (props) => {
   const [location, setLocation] = useState({ searchterm: "" });
 
   const handleText = (e) => {
-    const txtInput = { ...location, [e.target.name]: e.target.value };
+    const txtInput = {
+      ...location,
+      [e.target.name]: e.target.value.toLowerCase(),
+    };
     setLocation(txtInput.searchterm.replaceAll(" ", "+"));
   };
 
