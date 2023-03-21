@@ -4,7 +4,8 @@ const Search = (props) => {
   const [location, setLocation] = useState({ searchterm: "" });
 
   const handleText = (e) => {
-    setLocation({ ...location, [e.target.name]: e.target.value });
+    const txtInput = { ...location, [e.target.name]: e.target.value };
+    setLocation(txtInput:String.replace(" ", "+"));
   };
 
   const handleSubmit = (e) => {
