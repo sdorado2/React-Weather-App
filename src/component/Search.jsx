@@ -12,6 +12,9 @@ const Search = (props) => {
     props.searchLocation(location.searchterm);
   };
 
+  console.log(handleSubmit);
+  console.log(location);
+
   return (
     <div>
       <form onSubmit={handleSubmit}>
