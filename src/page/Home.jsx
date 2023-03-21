@@ -24,7 +24,13 @@ const Home = () => {
   return (
     <div>
       Weather Search
-      <Search searchLocation={getWeather} />
+      <div>
+        <Search searchLocation={getWeather} />
+      </div>
+      <h1>
+        {weather.city.name},{weather.city.country}
+      </h1>
+      {/* <h2>Temp : {weather.list[0].main.temp}</h2> */}
     </div>
   );
 };
