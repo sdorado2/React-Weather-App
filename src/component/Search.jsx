@@ -5,16 +5,16 @@ const Search = (props) => {
 
   const handleText = (e) => {
     const txtInput = { ...location, [e.target.name]: e.target.value };
-    setLocation(txtInput:String.replace(" ", "+"));
+    setLocation(txtInput);
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    props.searchLocation(location.searchterm);
+    props.searchLocation(location.searchterm.replace(" ", "+"));
   };
 
   console.log(handleSubmit);
-  console.log(location);
+  console.log("location var:", location.searchterm.replace(" ", "+"));
 
   return (
     <div>
