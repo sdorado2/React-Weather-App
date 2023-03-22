@@ -4,6 +4,7 @@ import axios from "axios";
 
 const Home = () => {
   const [weather, setWeather] = useState([]);
+  const [isLoading, setLoading] = useState(false);
   const api_key = process.env.REACT_APP_API_KEY;
   // const url = "#";
 
@@ -28,8 +29,10 @@ const Home = () => {
       <div>
         <Search searchLocation={getWeather} />
       </div>
-      <h1>{/* {weather.city.name},{weather.city.country} */}</h1>
-      {/* <h2>Temp : {weather.list[0].main.temp}</h2> */}
+      <h1>
+        {weather.city.name},{weather.city.country}
+      </h1>
+      <h2>Temp : {weather.list[0].main.temp}</h2>
     </div>
   );
 };
