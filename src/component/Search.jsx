@@ -18,7 +18,7 @@ const Search = (props) => {
 
   // console.log(handleSubmit);
   console.log("location var:", location);
-  console.log(`I submitted ${handleSubmit}`);
+  // console.log(`I submitted ${handleSubmit}`);
 
   return (
     <div>

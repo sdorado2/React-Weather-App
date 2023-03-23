@@ -4,7 +4,7 @@ import axios from "axios";
 
 const Home = () => {
   const [weather, setWeather] = useState([]);
-  const [isLoading, setLoading] = useState(false);
+  const [isLoading, setLoading] = useState(true);
   const api_key = process.env.REACT_APP_API_KEY;
   // const url = "#";
 
@@ -13,7 +13,6 @@ const Home = () => {
   }, []);
 
   const getWeather = async (searchTerm) => {
-    setLoading(true);
     const response = await axios
       .get(
         `http://api.openweathermap.org/data/2.5/forecast?q=${searchTerm},us&appid=${api_key}`
@@ -26,19 +25,19 @@ const Home = () => {
   };
 
   const loading = () => {
+    console.log("Waiting!");
     return (
       <div>
-        {console.log("Waiting!")}
         <h1>Please Wait While The Page Loads</h1>
       </div>
     );
   };
 
   const loaded = () => {
+    console.log("It is loaded");
     return (
       <div>
         <h1>
-          {console.log("It is loaded")}
           {weather.city.name},{weather.city.country}
         </h1>
         <h2>Temp : {weather.list[0].main.temp}</h2>
