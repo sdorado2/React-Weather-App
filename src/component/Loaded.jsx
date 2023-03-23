@@ -1,5 +1,6 @@
 import React from "react";
 import Celsius from "./Celsius";
+import Fahrenheit from "./Fahrenheit";
 
 const Loaded = ({ weather }) => {
   console.log("It is loaded");
@@ -15,7 +16,8 @@ const Loaded = ({ weather }) => {
         {weather.list.map((elem) => (
           <div className="testing">
             <h2>
-              At : {elem.dt_txt} <hr /> Temp : <Celsius temp={elem.main.temp} />
+              At : {elem.dt_txt} <hr /> Temp :{" "}
+              <Fahrenheit temp={elem.main.temp} />
             </h2>
           </div>
         ))}

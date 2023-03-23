@@ -1,14 +1,18 @@
 import React from "react";
 
-export const Fahrenheit = ({ temp }) => {
+const Fahrenheit = ({ temp }) => {
   const ABSOLUTEZERO = -273;
   const KELVIN = Math.floor(temp);
-  let celsius = 32;
+  const CONVERSIONRATE = 9 / 5;
+  const CELSIUS = 32;
+  let fahrenheit = 0;
 
-  const convertToC = () => {
-    return (celsius = KELVIN + ABSOLUTEZERO);
+  const convertToF = () => {
+    fahrenheit = CELSIUS + (KELVIN + ABSOLUTEZERO) * CONVERSIONRATE;
+    return Math.floor(fahrenheit);
   };
 
-  return <div>{convertToC()} &deg;C </div>;
+  return <div>{convertToF()} &deg;F </div>;
 };
-fca;
+
+export default Fahrenheit;
