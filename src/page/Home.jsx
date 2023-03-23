@@ -47,7 +47,7 @@ const Home = () => {
 
   return (
     <div>
-      Weather Search
+      <h1>Weather Search</h1>
       <div>
         <Search searchLocation={getWeather} />
       </div>
