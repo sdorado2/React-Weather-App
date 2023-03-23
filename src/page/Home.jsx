@@ -6,14 +6,13 @@ import Loading from "../component/Loading";
 
 const Home = () => {
   const [weather, setWeather] = useState([]);
-  const [isLoading, setLoading] = useState(false);
+  const [isLoading, setLoading] = useState(true);
   const api_key = process.env.REACT_APP_API_KEY;
   // const url = "#";
 
   useEffect(() => {
-    setLoading(true);
     getWeather("New York");
-    setLoading(false);
+    setTimeout(() => setLoading(false), 5000);
   }, []);
 
   const getWeather = async (searchTerm) => {

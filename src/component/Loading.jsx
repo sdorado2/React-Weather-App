@@ -4,7 +4,10 @@ const Loading = () => {
   console.log("Waiting!");
   return (
     <div>
-      <h1>Please Wait While The Page Loads</h1>
+      <h1>
+        Please Wait.... <br />
+        The Page Is Loading
+      </h1>
     </div>
   );
 };
