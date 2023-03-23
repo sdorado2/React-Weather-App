@@ -4,12 +4,14 @@ import axios from "axios";
 
 const Home = () => {
   const [weather, setWeather] = useState([]);
-  const [isLoading, setLoading] = useState(true);
+  const [isLoading, setLoading] = useState(false);
   const api_key = process.env.REACT_APP_API_KEY;
   // const url = "#";
 
   useEffect(() => {
+    setLoading(true);
     getWeather("New York");
+    setLoading(false);
   }, []);
 
   const getWeather = async (searchTerm) => {
@@ -21,7 +23,6 @@ const Home = () => {
 
     console.log("Return response:", response);
     setWeather(response);
-    setLoading(false);
   };
 
   const loading = () => {
@@ -51,7 +52,7 @@ const Home = () => {
       <div>
         <Search searchLocation={getWeather} />
       </div>
-      {isLoading ? loaded : loading}
+      {isLoading ? loading : loaded}
     </div>
   );
 };
