@@ -4,21 +4,18 @@ const Search = (props) => {
   const [location, setLocation] = useState({ searchterm: "" });
 
   const handleText = (e) => {
-    const txtInput = {
-      ...location,
-      [e.target.name]: e.target.value.toLowerCase(),
-    };
-    setLocation(txtInput.searchterm.replaceAll(" ", "+"));
+    const txtInput = { ...location, [e.target.name]: e.target.value };
+    setLocation(txtInput);
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    props.searchLocation(location.searchterm);
+    const newloca = location.searchterm.toLowerCase().replaceAll(" ", "+");
+    props.searchLocation(newloca);
   };
 
   // console.log(handleSubmit);
   console.log("location var:", location);
-  // console.log(`I submitted ${handleSubmit}`);
 
   return (
     <div>
