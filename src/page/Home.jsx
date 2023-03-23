@@ -13,6 +13,7 @@ const Home = () => {
   }, []);
 
   const getWeather = async (searchTerm) => {
+    setLoading(true);
     const response = await axios
       .get(
         `http://api.openweathermap.org/data/2.5/forecast?q=${searchTerm},us&appid=${api_key}`
@@ -21,20 +22,33 @@ const Home = () => {
 
     console.log("Return response:", response);
     setWeather(response);
+    setLoading(false);
   };
 
-  return (
-    <div>
-      Weather Search
+  const loading = () => {
+    return (
       <div>
-        <Search searchLocation={getWeather} />
+        <h1>Please Wait While The Page Loads</h1>
       </div>
-      <h1>
-        {weather.city.name},{weather.city.country}
-      </h1>
-      <h2>Temp : {weather.list[0].main.temp}</h2>
-    </div>
-  );
+    );
+  };
+
+  const loaded = () => {
+    return (
+      <div>
+        Weather Search
+        <div>
+          <Search searchLocation={getWeather} />
+        </div>
+        <h1>
+          {weather.city.name},{weather.city.country}
+        </h1>
+        <h2>Temp : {weather.list[0].main.temp}</h2>
+      </div>
+    );
+  };
+
+  return isLoading === true ? loading : loaded;
 };
 
 export default Home;
