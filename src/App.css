@@ -37,21 +37,24 @@
   }
 }
 
-.spanTest{
-  border : solid black;
-  margin : auto;
-  display : flex;
-  justify-content: space-between;
+.spanTest {
+  border: solid black;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
   align-items: center;
   flex-flow: row wrap;
-  width : 75svw;
-
+  width: 75svw;
 }
 
-.testing{
-  border : solid red;
+.testing {
+  border: solid red;
   display: flex;
-  margin-top : 2rem;
-  width : 15svw;
+  margin-top: 2rem;
+  width: 15svw;
   /* height: 30svh; */
+}
+
+.convertTemp {
+  display: flex;
 }
