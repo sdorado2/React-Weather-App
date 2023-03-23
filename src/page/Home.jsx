@@ -36,10 +36,6 @@ const Home = () => {
   const loaded = () => {
     return (
       <div>
-        Weather Search
-        <div>
-          <Search searchLocation={getWeather} />
-        </div>
         <h1>
           {weather.city.name},{weather.city.country}
         </h1>
@@ -48,7 +44,15 @@ const Home = () => {
     );
   };
 
-  return isLoading === true ? loading : loaded;
+  return (
+    <div>
+      Weather Search
+      <div>
+        <Search searchLocation={getWeather} />
+      </div>
+      {isLoading ? loading : loaded}
+    </div>
+  );
 };
 
 export default Home;
