@@ -1,6 +1,6 @@
 import React from "react";
 
-const Loaded = () => {
+const Loaded = ({ weather }) => {
   console.log("It is loaded");
   return (
     <div>

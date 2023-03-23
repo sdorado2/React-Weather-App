@@ -33,7 +33,7 @@ const Home = () => {
       <div>
         <Search searchLocation={getWeather} />
       </div>
-      {isLoading ? <Loading /> : <Loaded />}
+      {isLoading ? <Loading /> : <Loaded weather={weather} />}
     </div>
   );
 };
