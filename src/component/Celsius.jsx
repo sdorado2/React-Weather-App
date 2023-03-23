@@ -1,24 +1,15 @@
 import React from "react";
 
 const Celsius = ({ temp }) => {
-  const ABSOLUTEZERO = -273.15;
-  const KELVIN = temp;
+  const ABSOLUTEZERO = -273;
+  const KELVIN = Math.floor(temp);
   let celsius = 0;
 
-  console.log(KELVIN);
-
   const convertToC = () => {
-    celsius = KELVIN + ABSOLUTEZERO;
-    return celsius;
+    return (celsius = KELVIN + ABSOLUTEZERO);
   };
 
-  console.log(
-    "🚀 ~ file: Celsius.jsx:9 ~ conversionToC ~ conversionToC:",
-    convertToC()
-  );
-  console.log("🚀 ~ file: Celsius.jsx:7 ~ Celsius ~ celsius:", celsius);
-
-  return <div>{convertToC()}</div>;
+  return <div>{convertToC()} &deg;C </div>;
 };
 
 export default Celsius;
