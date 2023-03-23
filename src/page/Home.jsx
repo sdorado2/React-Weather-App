@@ -28,6 +28,7 @@ const Home = () => {
   const loading = () => {
     return (
       <div>
+        {console.log("Waiting!")}
         <h1>Please Wait While The Page Loads</h1>
       </div>
     );
@@ -37,6 +38,7 @@ const Home = () => {
     return (
       <div>
         <h1>
+          {console.log("It is loaded")}
           {weather.city.name},{weather.city.country}
         </h1>
         <h2>Temp : {weather.list[0].main.temp}</h2>
@@ -50,7 +52,7 @@ const Home = () => {
       <div>
         <Search searchLocation={getWeather} />
       </div>
-      {isLoading ? loading : loaded}
+      {isLoading ? loaded : loading}
     </div>
   );
 };
