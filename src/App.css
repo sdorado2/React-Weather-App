@@ -36,3 +36,22 @@
     transform: rotate(360deg);
   }
 }
+
+.spanTest{
+  border : solid black;
+  margin : auto;
+  display : flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-flow: row wrap;
+  width : 75svw;
+
+}
+
+.testing{
+  border : solid red;
+  display: flex;
+  margin-top : 2rem;
+  width : 15svw;
+  /* height: 30svh; */
+}

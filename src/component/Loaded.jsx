@@ -9,11 +9,16 @@ const Loaded = ({ weather }) => {
       </h1>
       <h2>Temperature : {weather.list[0].main.temp}</h2>
       <h2>At : {weather.list[0].dt_txt}</h2>
-      <span>
+      <div className="spanTest">
         {weather.list.map((elem) => (
-          <h2>{elem.main.temp}</h2>
+          <div className="testing">
+            <h2>Forecast</h2>
+            <h2>
+              At : {elem.dt_txt} <hr /> Temp : {elem.main.temp}
+            </h2>
+          </div>
         ))}
-      </span>
+      </div>
     </div>
   );
 };
