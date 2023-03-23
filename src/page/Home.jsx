@@ -1,6 +1,8 @@
+import axios from "axios";
 import React, { useEffect, useState } from "react";
 import Search from "../component/Search";
-import axios from "axios";
+import Loaded from "../component/Loaded";
+import Loading from "../component/Loading";
 
 const Home = () => {
   const [weather, setWeather] = useState([]);
@@ -25,34 +27,13 @@ const Home = () => {
     console.log("search term has : ", searchTerm);
   };
 
-  const loading = () => {
-    console.log("Waiting!");
-    return (
-      <div>
-        <h1>Please Wait While The Page Loads</h1>
-      </div>
-    );
-  };
-
-  const loaded = () => {
-    console.log("It is loaded");
-    return (
-      <div>
-        <h1>
-          {weather.city.name},{weather.city.country}
-        </h1>
-        <h2>Temp : {weather.list[0].main.temp}</h2>
-      </div>
-    );
-  };
-
   return (
     <div>
       <h1>Weather Search</h1>
       <div>
         <Search searchLocation={getWeather} />
       </div>
-      {isLoading ? loading : loaded}
+      {isLoading ? <Loading /> : <Loaded />}
     </div>
   );
 };

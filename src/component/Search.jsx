@@ -25,8 +25,8 @@ const Search = (props) => {
           name="searchterm"
           onChange={handleText}
           value={location.searchterm}
-        ></input>
-        <input type="submit" value="submit"></input>
+        />
+        <input type="submit" value="submit" />
       </form>
     </div>
   );
