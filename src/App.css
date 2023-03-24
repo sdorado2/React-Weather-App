@@ -56,5 +56,8 @@
 }
 
 .convertTemp {
+  width: 20svw;
+  margin: auto;
   display: flex;
+  justify-content: flex-end;
 }

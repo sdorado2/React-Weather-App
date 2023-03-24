@@ -41,6 +41,12 @@ const Loaded = ({ weather }) => {
           {weather.city.name},{weather.city.country}
         </h1>
         <h2>Temperature : {weather.list[0].main.temp}</h2>
+        <h2>Feel like : {weather.list[0].main.feels_like}</h2>
+        <p>
+          {weather.list[0].weather[0].main}
+          <br />
+          {weather.list[0].weather[0].description}
+        </p>
         <h2>At : {weather.list[0].dt_txt}</h2>
       </div>
     );
