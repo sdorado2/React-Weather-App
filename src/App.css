@@ -37,7 +37,7 @@
   }
 }
 
-.spanTest {
+.forecast {
   border: solid black;
   margin: auto;
   display: flex;
@@ -47,7 +47,7 @@
   width: 75svw;
 }
 
-.testing {
+.hrForecast {
   border: solid red;
   display: flex;
   justify-content: center;
@@ -59,7 +59,7 @@
 
 .convertTemp {
   border: solid green;
-  width: 15svw;
+  width: 25svw;
   margin: auto;
   display: flex;
   justify-content: space-evenly;

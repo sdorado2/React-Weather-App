@@ -3,9 +3,9 @@ import Fahrenheit from "./Fahrenheit";
 
 const DisplayInFahrenheit = ({ weather }) => {
   return (
-    <div className="spanTest">
+    <div className="forecast">
       {weather.list.map((elem) => (
-        <div className="testing">
+        <div className="hrForecast">
           <h2>
             At : {elem.dt_txt} <hr /> Temp :{" "}
             <Fahrenheit temp={elem.main.temp} />

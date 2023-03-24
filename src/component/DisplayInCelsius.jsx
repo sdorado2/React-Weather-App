@@ -3,12 +3,15 @@ import Celsius from "./Celsius";
 
 const DisplayInCelsius = ({ weather }) => {
   return (
-    <div className="spanTest">
+    <div className="forecast">
       {weather.list.map((elem) => (
-        <div className="testing">
+        <div className="hrForecast">
           <h2>
             At : {elem.dt_txt} <hr /> Temp : <Celsius temp={elem.main.temp} />
           </h2>
+          <p>
+            {elem.weather[0].main} {elem.weather[0].description}
+          </p>
         </div>
       ))}
     </div>

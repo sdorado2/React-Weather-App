@@ -1,9 +1,10 @@
 import React, { useEffect } from "react";
-import Celsius from "./Celsius";
 import Fahrenheit from "./Fahrenheit";
 import { useState } from "react";
 import DisplayInCelsius from "./DisplayInCelsius";
 import DisplayInFahrenheit from "./DisplayInFahrenheit";
+
+// ? Create A Kelvin Tab
 
 const Loaded = ({ weather }) => {
   const [defaultDisp, setDefault] = useState();
@@ -11,21 +12,6 @@ const Loaded = ({ weather }) => {
   useEffect(() => {
     setDefault(<DisplayInFahrenheit weather={weather} />);
   }, []);
-
-  // const displayInFahrenheit = () => {
-  //   return (
-  //     <div className="spanTest">
-  //       {weather.list.map((elem) => (
-  //         <div className="testing">
-  //           <h2>
-  //             At : {elem.dt_txt} <hr /> Temp :{" "}
-  //             <Fahrenheit temp={elem.main.temp} />
-  //           </h2>
-  //         </div>
-  //       ))}
-  //     </div>
-  //   );
-  // };
 
   const temperatureNow = () => {
     return (
