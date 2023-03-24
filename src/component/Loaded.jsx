@@ -59,8 +59,6 @@ const Loaded = ({ weather }) => {
     );
   };
 
-  console.log("It is loaded");
-
   return (
     <div>
       {temperatureNow()}
@@ -70,16 +68,6 @@ const Loaded = ({ weather }) => {
         <div onClick={() => setDefault(displayInCelsius())}>Celsius</div>
       </div>
       {defaultDisp}
-      {/* <div className="spanTest">
-        {weather.list.map((elem) => (
-          <div className="testing">
-            <h2>
-              At : {elem.dt_txt} <hr /> Temp :{" "}
-              <Fahrenheit temp={elem.main.temp} />
-            </h2>
-          </div>
-        ))}
-      </div> */}
     </div>
   );
 };
