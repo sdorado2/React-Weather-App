@@ -8,6 +8,8 @@ import DisplayInFahrenheit from "./DisplayInFahrenheit";
 
 const Loaded = ({ weather }) => {
   const [defaultDisp, setDefault] = useState();
+  let date = new Date(weather.list[0].dt);
+  console.log("🚀 ~ file: Loaded.jsx:12 ~ Loaded ~ date:", date);
 
   useEffect(() => {
     setDefault(<DisplayInFahrenheit weather={weather} />);
@@ -29,7 +31,7 @@ const Loaded = ({ weather }) => {
           {weather.list[0].weather[0].description}
         </p>
         <h2>At : {weather.list[0].dt_txt}</h2>
-        <h2>At : {Date(weather.list[0].dt)}</h2>
+        <h2>At : {date[0]}</h2>
       </div>
     );
   };
