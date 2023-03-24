@@ -3,28 +3,29 @@ import Celsius from "./Celsius";
 import Fahrenheit from "./Fahrenheit";
 import { useState } from "react";
 import DisplayInCelsius from "./DisplayInCelsius";
+import DisplayInFahrenheit from "./DisplayInFahrenheit";
 
 const Loaded = ({ weather }) => {
   const [defaultDisp, setDefault] = useState();
 
   useEffect(() => {
-    setDefault(displayInFahrenheit());
+    setDefault(<DisplayInFahrenheit weather={weather} />);
   }, []);
 
-  const displayInFahrenheit = () => {
-    return (
-      <div className="spanTest">
-        {weather.list.map((elem) => (
-          <div className="testing">
-            <h2>
-              At : {elem.dt_txt} <hr /> Temp :{" "}
-              <Fahrenheit temp={elem.main.temp} />
-            </h2>
-          </div>
-        ))}
-      </div>
-    );
-  };
+  // const displayInFahrenheit = () => {
+  //   return (
+  //     <div className="spanTest">
+  //       {weather.list.map((elem) => (
+  //         <div className="testing">
+  //           <h2>
+  //             At : {elem.dt_txt} <hr /> Temp :{" "}
+  //             <Fahrenheit temp={elem.main.temp} />
+  //           </h2>
+  //         </div>
+  //       ))}
+  //     </div>
+  //   );
+  // };
 
   const temperatureNow = () => {
     return (
@@ -51,7 +52,11 @@ const Loaded = ({ weather }) => {
       {temperatureNow()}
       <h2>Forecast</h2>
       <div className="convertTemp">
-        <div onClick={() => setDefault(displayInFahrenheit())}>Fahrenheit</div>
+        <div
+          onClick={() => setDefault(<DisplayInFahrenheit weather={weather} />)}
+        >
+          Fahrenheit
+        </div>
         <div onClick={() => setDefault(<DisplayInCelsius weather={weather} />)}>
           Celsius
         </div>
