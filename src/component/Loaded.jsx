@@ -21,6 +21,8 @@ const Loaded = ({ weather }) => {
     return (
       <div>
         <h1>
+          {date}
+          <br />
           {weather.city.name},{weather.city.country}
         </h1>
         <h2>
@@ -32,11 +34,8 @@ const Loaded = ({ weather }) => {
           <br />
           {weather.list[0].weather[0].description}
         </p>
-        <h2>At : {weather.list[0].dt_txt}</h2>
-        <h2>At : {dateObj[0]}</h2>
-        <h2>
-          At : {date} , {hrs}
-        </h2>
+        {/* <h2>At : {weather.list[0].dt_txt}</h2> */}
+        <h2>At : {hrs}</h2>
       </div>
     );
   };
