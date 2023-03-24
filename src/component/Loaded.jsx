@@ -10,12 +10,8 @@ const Loaded = ({ weather }) => {
   const [defaultDisp, setDefault] = useState();
   const MILLISECONDS = 1000;
   let dateObj = new Date(weather.list[0].dt * MILLISECONDS);
-  console.log(
-    "🚀 ~ file: Loaded.jsx:12 ~ Loaded ~ weather.list[0].dt:",
-    weather.list[0].dt
-  );
-  console.log("🚀 ~ file: Loaded.jsx:12 ~ Loaded ~ dateObj:", dateObj);
   let date = dateObj.toDateString();
+  let hrs = dateObj.toLocaleTimeString();
 
   useEffect(() => {
     setDefault(<DisplayInFahrenheit weather={weather} />);
@@ -38,7 +34,9 @@ const Loaded = ({ weather }) => {
         </p>
         <h2>At : {weather.list[0].dt_txt}</h2>
         <h2>At : {dateObj[0]}</h2>
-        <h2>At : {date}</h2>
+        <h2>
+          At : {date} , {hrs}
+        </h2>
       </div>
     );
   };
