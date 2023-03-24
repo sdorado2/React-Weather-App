@@ -10,6 +10,11 @@ const DisplayInFahrenheit = ({ weather }) => {
             At : {elem.dt_txt} <hr /> Temp :{" "}
             <Fahrenheit temp={elem.main.temp} />
           </h2>
+          <p>
+            {elem.weather[0].main}
+            <br />
+            {elem.weather[0].description}
+          </p>
         </div>
       ))}
     </div>
