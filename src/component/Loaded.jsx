@@ -1,38 +1,43 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Celsius from "./Celsius";
 import Fahrenheit from "./Fahrenheit";
+import { useState } from "react";
 
 const Loaded = ({ weather }) => {
-  // const defaultDisplay = displayInFahrenheit();
+  const [defaultDisp, setDefault] = useState();
 
-  // const displayInFahrenheit = () => {
-  //   return (
-  //     <div className="spanTest">
-  //       {weather.list.map((elem) => (
-  //         <div className="testing">
-  //           <h2>
-  //             At : {elem.dt_txt} <hr /> Temp :{" "}
-  //             <Fahrenheit temp={elem.main.temp} />
-  //           </h2>
-  //         </div>
-  //       ))}
-  //     </div>
-  //   );
-  // };
+  useEffect(() => {
+    setDefault(displayInFahrenheit());
+  }, []);
 
-  // const displayInCelsius = () => {
-  //   return (
-  //     <div className="spanTest">
-  //       {weather.list.map((elem) => (
-  //         <div className="testing">
-  //           <h2>
-  //             At : {elem.dt_txt} <hr /> Temp : <Celsius temp={elem.main.temp} />
-  //           </h2>
-  //         </div>
-  //       ))}
-  //     </div>
-  //   );
-  // };
+  const displayInFahrenheit = () => {
+    return (
+      <div className="spanTest">
+        {weather.list.map((elem) => (
+          <div className="testing">
+            <h2>
+              At : {elem.dt_txt} <hr /> Temp :{" "}
+              <Fahrenheit temp={elem.main.temp} />
+            </h2>
+          </div>
+        ))}
+      </div>
+    );
+  };
+
+  const displayInCelsius = () => {
+    return (
+      <div className="spanTest">
+        {weather.list.map((elem) => (
+          <div className="testing">
+            <h2>
+              At : {elem.dt_txt} <hr /> Temp : <Celsius temp={elem.main.temp} />
+            </h2>
+          </div>
+        ))}
+      </div>
+    );
+  };
 
   const temperatureNow = () => {
     return (
@@ -61,9 +66,10 @@ const Loaded = ({ weather }) => {
       {temperatureNow()}
       <h2>Forecast</h2>
       <div className="convertTemp">
-        <div>Fahrenheit</div>
-        <div>Celsius</div>
+        <div onClick={() => setDefault(displayInFahrenheit())}>Fahrenheit</div>
+        <div onClick={() => setDefault(displayInCelsius())}>Celsius</div>
       </div>
+      {defaultDisp}
       {/* <div className="spanTest">
         {weather.list.map((elem) => (
           <div className="testing">
