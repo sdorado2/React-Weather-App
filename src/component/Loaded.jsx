@@ -29,6 +29,7 @@ const Loaded = ({ weather }) => {
           {weather.list[0].weather[0].description}
         </p>
         <h2>At : {weather.list[0].dt_txt}</h2>
+        <h2>At : {Date(weather.list[0].dt)}</h2>
       </div>
     );
   };

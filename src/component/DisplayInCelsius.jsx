@@ -10,7 +10,9 @@ const DisplayInCelsius = ({ weather }) => {
             At : {elem.dt_txt} <hr /> Temp : <Celsius temp={elem.main.temp} />
           </h2>
           <p>
-            {elem.weather[0].main} {elem.weather[0].description}
+            {elem.weather[0].main}
+            <br />
+            {elem.weather[0].description}
           </p>
         </div>
       ))}
