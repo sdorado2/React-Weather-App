@@ -50,6 +50,8 @@
 .testing {
   border: solid red;
   display: flex;
+  justify-content: center;
+  align-items: center;
   margin-top: 2rem;
   width: 15svw;
   /* height: 30svh; */
@@ -61,6 +63,7 @@
   margin: auto;
   display: flex;
   justify-content: space-evenly;
+  align-items: center;
 }
 
 .convertTemp div {
