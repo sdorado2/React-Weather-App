@@ -1,4 +1,5 @@
 import React from "react";
+import weatherIcons from "../model/Weathericons";
 import Fahrenheit from "./Fahrenheit";
 
 const DisplayInFahrenheit = ({ weather }) => {
@@ -15,6 +16,10 @@ const DisplayInFahrenheit = ({ weather }) => {
               timeStyle: "short",
             })}
             <hr />
+            <img
+              src={weatherIcons[elem.weather[0].main.toLowerCase()]}
+              alt="weather_icon"
+            />
           </h4>
           <h2>
             <hr /> Temp : <Fahrenheit temp={elem.main.temp} />
