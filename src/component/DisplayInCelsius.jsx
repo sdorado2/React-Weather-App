@@ -13,7 +13,6 @@ const DisplayInCelsius = ({ weather }) => {
             })}{" "}
             <hr />
           </h4>
-
           <h2>
             Temp : <Celsius temp={elem.main.temp} />
           </h2>

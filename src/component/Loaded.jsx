@@ -12,7 +12,7 @@ const Loaded = ({ weather }) => {
   let dateObj = new Date(weather.list[0].dt * MILLISECONDS);
   let date = dateObj.toDateString();
   let hrs = dateObj.toLocaleTimeString("en-US", {
-    timeZone: "America/Los_Angeles",
+    timeZone: "America/New_York",
   });
 
   useEffect(() => {
