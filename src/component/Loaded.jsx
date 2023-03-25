@@ -6,7 +6,6 @@ import DisplayInFahrenheit from "./DisplayInFahrenheit";
 import weatherIcons from "../model/Weathericons";
 
 // ? : Create A Kelvin Tab
-// TODO : Search for Weather Icons
 // TODO : Move the onClick inside the setDefault
 
 const Loaded = ({ weather }) => {
@@ -16,21 +15,12 @@ const Loaded = ({ weather }) => {
   let date = dateObj.toDateString();
   let hrs = dateObj.toLocaleTimeString("en-US", {
     timeZone: "America/New_York",
+    timeStyle: "short",
   });
 
   useEffect(() => {
     setDefault(<DisplayInFahrenheit weather={weather} />);
   }, []);
-
-  console.log(
-    "🚀 ~ file: Loaded.jsx:40 ~ temperatureNow ~ weatherIcons[weather.list[0].weather[0].main]:",
-    weatherIcons[weather.list[0].weather[0].main]
-  );
-
-  console.log(
-    "🚀 ~ file: Loaded.jsx:49 ~ temperatureNow ~ weather.list[0].weather[0].main:",
-    weather.list[0].weather[0].main.toLowerCase()
-  );
 
   const temperatureNow = () => {
     return (
