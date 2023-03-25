@@ -7,9 +7,12 @@ const DisplayInCelsius = ({ weather }) => {
       {weather.list.map((elem) => (
         <div className="hrForecast">
           <h4>
+            {new Date(elem.dt * 1000).toDateString()}
+            <br />
             At :{" "}
             {new Date(elem.dt * 1000).toLocaleTimeString("en-US", {
               timeZone: "America/New_York",
+              timeStyle: "short",
             })}{" "}
             <hr />
           </h4>
