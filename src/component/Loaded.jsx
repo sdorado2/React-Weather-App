@@ -22,6 +22,16 @@ const Loaded = ({ weather }) => {
     setDefault(<DisplayInFahrenheit weather={weather} />);
   }, []);
 
+  console.log(
+    "🚀 ~ file: Loaded.jsx:40 ~ temperatureNow ~ weatherIcons[weather.list[0].weather[0].main]:",
+    weatherIcons[weather.list[0].weather[0].main]
+  );
+
+  console.log(
+    "🚀 ~ file: Loaded.jsx:49 ~ temperatureNow ~ weather.list[0].weather[0].main:",
+    weather.list[0].weather[0].main.toLowerCase()
+  );
+
   const temperatureNow = () => {
     return (
       <div>
@@ -36,9 +46,10 @@ const Loaded = ({ weather }) => {
         </h2>
         <p>
           <img
-            src={weatherIcons[weather.list[0].weather[0].main]}
+            src={weatherIcons[weather.list[0].weather[0].main.toLowerCase()]}
             alt="weather_icon"
           />
+          <br />
           {weather.list[0].weather[0].main}
           <br />
           {weather.list[0].weather[0].description}
