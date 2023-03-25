@@ -15,7 +15,10 @@ const DisplayInFahrenheit = ({ weather }) => {
         // dateObj = new Date(elem.dt);
         <div className="hrForecast">
           <h2>
-            At : {new Date(elem.dt * 1000).toLocaleTimeString()}
+            At :{" "}
+            {new Date(elem.dt * 1000).toLocaleTimeString("en-US", {
+              timeZone: "America/New_York",
+            })}
             <hr />
             Date :{new Date(elem.dt * 1000).toDateString()}
             <hr /> Temp : <Fahrenheit temp={elem.main.temp} />

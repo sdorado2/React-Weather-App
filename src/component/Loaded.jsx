@@ -11,7 +11,9 @@ const Loaded = ({ weather }) => {
   const MILLISECONDS = 1000;
   let dateObj = new Date(weather.list[0].dt * MILLISECONDS);
   let date = dateObj.toDateString();
-  let hrs = dateObj.toLocaleTimeString();
+  let hrs = dateObj.toLocaleTimeString("en-US", {
+    timeZone: "America/Los_Angeles",
+  });
 
   useEffect(() => {
     setDefault(<DisplayInFahrenheit weather={weather} />);
@@ -45,6 +47,7 @@ const Loaded = ({ weather }) => {
       {temperatureNow()}
       <h2>Forecast</h2>
       <div className="convertTemp">
+        {/* move onclick inside the setDefault */}
         <div
           onClick={() => setDefault(<DisplayInFahrenheit weather={weather} />)}
         >
