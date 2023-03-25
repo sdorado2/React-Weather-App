@@ -7,6 +7,8 @@ const DisplayInFahrenheit = ({ weather }) => {
       {weather.list.map((elem) => (
         <div className="hrForecast">
           <h4>
+            {new Date(elem.dt * 1000).toDateString()}
+            <br />
             At :{" "}
             {new Date(elem.dt * 1000).toLocaleTimeString("en-US", {
               timeZone: "America/New_York",
@@ -14,7 +16,6 @@ const DisplayInFahrenheit = ({ weather }) => {
             <hr />
           </h4>
           <h2>
-            Date :{new Date(elem.dt * 1000).toDateString()}
             <hr /> Temp : <Fahrenheit temp={elem.main.temp} />
           </h2>
           <p>
