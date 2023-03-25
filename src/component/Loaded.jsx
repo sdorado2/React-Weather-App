@@ -4,7 +4,9 @@ import { useState } from "react";
 import DisplayInCelsius from "./DisplayInCelsius";
 import DisplayInFahrenheit from "./DisplayInFahrenheit";
 
-// ? Create A Kelvin Tab
+// ? : Create A Kelvin Tab
+// TODO : Search for Weather Icons
+// TODO : Move the onClick inside the setDefault
 
 const Loaded = ({ weather }) => {
   const [defaultDisp, setDefault] = useState();
