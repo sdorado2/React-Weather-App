@@ -12,6 +12,7 @@ const DisplayInFahrenheit = ({ weather }) => {
             At :{" "}
             {new Date(elem.dt * 1000).toLocaleTimeString("en-US", {
               timeZone: "America/New_York",
+              timeStyle: "short",
             })}
             <hr />
           </h4>
