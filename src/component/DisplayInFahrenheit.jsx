@@ -2,12 +2,6 @@ import React from "react";
 import Fahrenheit from "./Fahrenheit";
 
 const DisplayInFahrenheit = ({ weather }) => {
-  const MILLISECONDS = 1000;
-  let dateObj;
-  let dateTime;
-  let date;
-  let hrs;
-
   return (
     <div className="forecast">
       {weather.list.map((elem) => (
