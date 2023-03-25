@@ -59,8 +59,9 @@
 }
 
 .convertTemp {
-  border: solid green;
+  /* border: solid green; */
   width: 25svw;
+  padding-bottom: 1rem;
   margin: auto;
   display: flex;
   justify-content: space-evenly;
@@ -68,7 +69,8 @@
 }
 
 .convertTemp div {
-  border: solid purple;
+  border: solid black;
+  border-radius: 8px;
 }
 
 .convertTemp div:hover {
