@@ -3,6 +3,7 @@ import Fahrenheit from "./Fahrenheit";
 import { useState } from "react";
 import DisplayInCelsius from "./DisplayInCelsius";
 import DisplayInFahrenheit from "./DisplayInFahrenheit";
+import weatherIcons from "../model/Weathericons";
 
 // ? : Create A Kelvin Tab
 // TODO : Search for Weather Icons
@@ -34,6 +35,10 @@ const Loaded = ({ weather }) => {
           Feel like : <Fahrenheit temp={weather.list[0].main.feels_like} />
         </h2>
         <p>
+          <img
+            src={weatherIcons[weather.list[0].weather[0].main]}
+            alt="weather_icon"
+          />
           {weather.list[0].weather[0].main}
           <br />
           {weather.list[0].weather[0].description}
