@@ -21,6 +21,9 @@ const Home = () => {
       )
       .then((res) => {
         return res.data;
+      })
+      .catch((error) => {
+        console.log("🚀 ~ file: Home.jsx:26 ~ getWeather ~ error:", error);
       });
     setWeather(response);
     console.log("🚀 ~ file: Home.jsx:27 ~ getWeather ~ response:", response);
