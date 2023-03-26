@@ -3,7 +3,6 @@ import React, { useEffect, useState } from "react";
 import Search from "../component/Search";
 import Loaded from "../component/Loaded";
 import Loading from "../component/Loading";
-import Getweather from "../component/Getweather";
 
 const Home = () => {
   const [weather, setWeather] = useState([]);
@@ -11,7 +10,7 @@ const Home = () => {
   const api_key = process.env.REACT_APP_API_KEY;
 
   useEffect(() => {
-    Getweather("New York");
+    getWeather("New York");
     setTimeout(() => setLoading(false), 5000);
   }, []);
 
