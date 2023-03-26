@@ -18,9 +18,13 @@ const TemperatureNow = ({ weather }) => {
         <br />
         {weather.city.name},{weather.city.country}
       </h1>
-      <h2>
-        Temperature : <Fahrenheit temp={weather.list[0].main.temp} />
-        Feels like : <Fahrenheit temp={weather.list[0].main.feels_like} />
+      <h2 className="tempNow">
+        Temperature :&nbsp;
+        <Fahrenheit temp={weather.list[0].main.temp} />
+      </h2>
+      <h2 className="feelNow">
+        Feels like : &nbsp;
+        <Fahrenheit temp={weather.list[0].main.feels_like} />
       </h2>
       <p>
         <img
