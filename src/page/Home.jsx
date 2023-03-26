@@ -3,15 +3,15 @@ import React, { useEffect, useState } from "react";
 import Search from "../component/Search";
 import Loaded from "../component/Loaded";
 import Loading from "../component/Loading";
+import Getweather from "../component/Getweather";
 
 const Home = () => {
   const [weather, setWeather] = useState([]);
   const [isLoading, setLoading] = useState(true);
   const api_key = process.env.REACT_APP_API_KEY;
-  // const url = "#";
 
   useEffect(() => {
-    getWeather("New York");
+    Getweather("New York");
     setTimeout(() => setLoading(false), 5000);
   }, []);
 
@@ -26,7 +26,6 @@ const Home = () => {
 
   return (
     <div>
-      <h1>Weather Search</h1>
       <div>
         <Search searchLocation={getWeather} />
       </div>

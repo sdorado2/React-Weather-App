@@ -22,6 +22,7 @@ const Search = (props) => {
           name="searchterm"
           onChange={handleText}
           value={location.searchterm}
+          placeholder="Enter a city"
         />
         <input type="submit" value="submit" />
       </form>
