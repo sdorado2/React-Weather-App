@@ -20,7 +20,7 @@ const TemperatureNow = ({ weather }) => {
       </h1>
       <h2>
         Temperature : <Fahrenheit temp={weather.list[0].main.temp} />
-        Feel like : <Fahrenheit temp={weather.list[0].main.feels_like} />
+        Feels like : <Fahrenheit temp={weather.list[0].main.feels_like} />
       </h2>
       <p>
         <img

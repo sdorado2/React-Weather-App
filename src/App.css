@@ -1,3 +1,7 @@
+* {
+  margin: 0;
+}
+
 .App {
   text-align: center;
 }
@@ -8,13 +12,14 @@
 }
 
 .navBar {
-  border: solid black;
-  width: 20svw;
-  margin: 0;
+  /* border: solid black; */
+  /* width: 20svw; */
+  height: 4svh;
   font-family: Georgia, "Times New Roman", Times, serif;
-  display: flex;
+  background-image: linear-gradient(#829cc1, #cfc4c0, #f1b58a);
+  /* display: flex;
   flex-flow: column wrap;
-  align-items: flex-start;
+  align-items: flex-start; */
 }
 
 .forecast {
@@ -60,4 +65,11 @@
 .weatherIcon {
   width: 112px;
   height: 96px;
+}
+
+.minMax {
+  display: flex;
+  font-size: small;
+  font-family: "Arial Narrow Bold";
+  font-style: normal;
 }

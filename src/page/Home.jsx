@@ -19,8 +19,11 @@ const Home = () => {
       .get(
         `http://api.openweathermap.org/data/2.5/forecast?q=${searchTerm},us&appid=${api_key}`
       )
-      .then((res) => res.data);
+      .then((res) => {
+        return res.data;
+      });
     setWeather(response);
+    console.log("🚀 ~ file: Home.jsx:27 ~ getWeather ~ response:", response);
   };
 
   return (
