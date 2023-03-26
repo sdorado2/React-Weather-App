@@ -23,6 +23,11 @@ const DisplayInCelsius = ({ weather }) => {
           </h4>
           <h2>
             Temp : <Celsius temp={elem.main.temp} />
+            <span className="minMax">
+              &#9650;: <Celsius temp={elem.main.temp_max} />
+              &nbsp;|&nbsp;&#9661;:
+              <Celsius temp={elem.main.temp_min} />
+            </span>
           </h2>
           <p>
             {elem.weather[0].main}
