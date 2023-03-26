@@ -2,6 +2,10 @@
   margin: 0;
 }
 
+body {
+  background-image: linear-gradient(#829cc1, #cfc4c0, #f1b58a);
+}
+
 .App {
   text-align: center;
 }
@@ -12,14 +16,8 @@
 }
 
 .navBar {
-  /* border: solid black; */
-  /* width: 20svw; */
-  height: 7svh;
   font-family: Georgia, "Times New Roman", Times, serif;
-  background-image: linear-gradient(#829cc1, #cfc4c0, #f1b58a);
-  /* display: flex;
-  flex-flow: column wrap;
-  align-items: flex-start; */
+  background-color: #829cc1;
 }
 
 .tempNow,
@@ -29,7 +27,7 @@
 }
 
 .forecast {
-  border: solid black;
+  border: double green;
   margin: auto;
   display: flex;
   justify-content: space-around;
@@ -39,7 +37,7 @@
 }
 
 .hrForecast {
-  border: solid red;
+  border: solid #f1b58a;
   display: flex;
   justify-content: center;
   align-items: center;
