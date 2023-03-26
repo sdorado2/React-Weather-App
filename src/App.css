@@ -76,3 +76,8 @@
 .convertTemp div:hover {
   background-color: green;
 }
+
+.weatherIcon {
+  width: 112px;
+  height: 96px;
+}

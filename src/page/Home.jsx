@@ -21,9 +21,7 @@ const Home = () => {
         `http://api.openweathermap.org/data/2.5/forecast?q=${searchTerm},us&appid=${api_key}`
       )
       .then((res) => res.data);
-    console.log("Return response:", response);
     setWeather(response);
-    console.log("search term has : ", searchTerm);
   };
 
   return (

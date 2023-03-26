@@ -1,6 +1,5 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Fahrenheit from "./Fahrenheit";
-import { useState } from "react";
 import DisplayInCelsius from "./DisplayInCelsius";
 import DisplayInFahrenheit from "./DisplayInFahrenheit";
 import weatherIcons from "../model/Weathericons";
@@ -38,6 +37,7 @@ const Loaded = ({ weather }) => {
           <img
             src={weatherIcons[weather.list[0].weather[0].main.toLowerCase()]}
             alt="weather_icon"
+            className="weatherIcon"
           />
           <br />
           {weather.list[0].weather[0].main}
