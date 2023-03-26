@@ -23,11 +23,11 @@ const DisplayInFahrenheit = ({ weather }) => {
           </h4>
           <h2>
             <hr /> Temp : <Fahrenheit temp={elem.main.temp} />
-            <p className="minMax">
-              &#128314;: <Fahrenheit temp={elem.main.temp_max} />
-              &nbsp;|&nbsp;Min:
+            <span className="minMax">
+              &#9650;: <Fahrenheit temp={elem.main.temp_max} />
+              &nbsp;|&nbsp;&#9661;:
               <Fahrenheit temp={elem.main.temp_min} />
-            </p>
+            </span>
           </h2>
           <p>
             {elem.weather[0].main}
