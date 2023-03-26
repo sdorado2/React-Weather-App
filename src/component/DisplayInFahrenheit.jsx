@@ -6,7 +6,7 @@ const DisplayInFahrenheit = ({ weather }) => {
   return (
     <div className="forecast">
       {weather.list.map((elem) => (
-        <div className="hrForecast">
+        <div key={elem.dt} className="hrForecast">
           <h4>
             {new Date(elem.dt * 1000).toDateString()}
             <br />

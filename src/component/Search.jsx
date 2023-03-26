@@ -14,9 +14,6 @@ const Search = (props) => {
     props.searchLocation(newloca);
   };
 
-  // console.log(handleSubmit);
-  console.log("location var:", location);
-
   return (
     <div>
       <form onSubmit={handleSubmit}>
