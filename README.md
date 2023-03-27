@@ -11,7 +11,7 @@ Immediately after the page loads, a default city will show up. Type the name of 
 ![screenshot of Application](https://tinypic.host/images/2023/03/27/appScreenshot.png)
 
 ## Tech Used
-React JS
-HTML
-CSS
-JavaScript
++ React JS
++ HTML
++ CSS
++ JavaScript
