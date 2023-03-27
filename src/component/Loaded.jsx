@@ -4,7 +4,6 @@ import DisplayInFahrenheit from "./DisplayInFahrenheit";
 import TemperatureNow from "./TemperatureNow";
 
 // ? : Create A Kelvin Tab
-// TODO : Move the onClick inside the setDefault
 
 const Loaded = ({ weather }) => {
   const [defaultDisp, setDefault] = useState();
@@ -18,7 +17,6 @@ const Loaded = ({ weather }) => {
       <TemperatureNow weather={weather} />
       <h2>Forecast</h2>
       <div className="convertTemp">
-        {/* move onclick inside the setDefault */}
         <div
           onClick={() => setDefault(<DisplayInFahrenheit weather={weather} />)}
         >
