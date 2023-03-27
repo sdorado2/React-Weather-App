@@ -1,7 +1,9 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useRouteError } from "react-router-dom";
 
 const NotFound = () => {
+  const error = useRouteError();
+
   return (
     <div>
       <h2>Error 404 : Not Found</h2>

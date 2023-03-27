@@ -9,7 +9,7 @@ function App() {
     <div className="App">
       <Navbar />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Home />} errorElement={<NotFound />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </div>

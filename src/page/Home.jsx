@@ -3,6 +3,8 @@ import React, { useEffect, useState } from "react";
 import Search from "../component/Search";
 import Loaded from "../component/Loaded";
 import Loading from "../component/Loading";
+import NotFound from "./NotFound";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   const [weather, setWeather] = useState([]);
@@ -24,8 +26,14 @@ const Home = () => {
       })
       .catch((error) => {
         console.log("🚀 ~ file: Home.jsx:26 ~ getWeather ~ error:", error);
+        setLoading(true);
+        return <NotFound />;
       });
     setWeather(response);
+    console.log(
+      "🚀 ~ file: Home.jsx:29 ~ getWeather ~ setWeather(response);:",
+      setWeather(response)
+    );
     console.log("🚀 ~ file: Home.jsx:27 ~ getWeather ~ response:", response);
   };
 

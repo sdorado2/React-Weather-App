@@ -40,7 +40,7 @@ body {
 }
 
 .hrForecast {
-  border: solid lightseagreen;
+  border: ridge lightseagreen;
   display: flex;
   justify-content: center;
   align-items: center;
