@@ -5,10 +5,12 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "command": "npm start",
-      "name": "Run npm start",
+      "name": "npm Start",
+      "type": "msedge",
       "request": "launch",
-      "type": "node-terminal"
+      "url": "http://localhost:3000", // create-react-app's default port 3000
+      "webRoot": "${workspaceRoot}/src",
+      "preLaunchTask": "npm: start" // Add prelaunch Task npm: start (defined in tasks.json)
     },
     {
       "type": "chrome",
@@ -16,14 +18,6 @@
       "name": "Launch Chrome against localhost",
       "url": "http://localhost:3000",
       "webRoot": "${workspaceFolder}"
-    },
-    {
-      "name": "NPM Start",
-      "type": "chrome",
-      "request": "launch",
-      "url": "http://localhost:3000", // create-react-app's default port 3000
-      "webRoot": "${workspaceRoot}/src",
-      "preLaunchTask": "npm: start" // Add prelaunch Task npm: start (defined in tasks.json)
     }
   ]
 }

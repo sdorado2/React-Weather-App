@@ -4,6 +4,8 @@
 
 body {
   background-image: linear-gradient(#829cc1, #cfc4c0, #f1b58a);
+  background-size: auto;
+  background-repeat: no-repeat;
 }
 
 .App {
@@ -37,7 +39,7 @@ body {
 }
 
 .hrForecast {
-  border: solid #f1b58a;
+  border: solid lightseagreen;
   display: flex;
   justify-content: center;
   align-items: center;
