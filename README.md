@@ -8,7 +8,7 @@ Immediately after the page loads, a default city will show up. Type the name of 
 
 
 ## Screenshot
-![screenshot of Application](https://lensdump.com/i/9FjJJM)
+![9FjJJM.png](https://a.l3n.co/i/9FjJJM.png)
 
 ## Tech Used
 + React JS
